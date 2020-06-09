@@ -4,6 +4,7 @@ from time import sleep
 import re
 
 class Bot:
+    '''
     conversation = [
         "Oi",
         "Olá",
@@ -15,6 +16,9 @@ class Bot:
         "Quem é você?",
         "Aquele que pode te substituir em breve...,"
     ]
+    '''
+
+    conversation = open('trainers/train.txt','r',encoding="utf-8").readlines()
 
     def __init__(self, name="zero"):
         self.bot = ChatBot(name)
