@@ -1,4 +1,4 @@
-import speak from './utils.js'
+import { speak } from './utils.js'
 
 const text = document.querySelector('#text')
 const nome = document.querySelector('input')
