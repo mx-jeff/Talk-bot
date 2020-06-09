@@ -7,16 +7,22 @@ import random
 
 @eel.expose
 def chat(pergunta): 
-    # print('-'*40,'BOT CHAT','-'*40)
+    print('-'*40,'BOT CHAT','-'*40)
     bot = Bot('One')
-    #bot.train()
+    bot.train()
 
-    frase = pergunta # random.choice(bot.conversation)
-    # print(f"Pc: {frase}")
-    resposta = bot.call(frase)
-    # print(f"Bot: {resposta}")
-    eel.saida(f"Bot: {resposta}")
+    try:
+        frase = pergunta # random.choice(bot.conversation)
+        print(f"Pc: {frase}")
+        resposta = bot.call(frase)
+        print(f"Bot: {resposta}")
+        eel.saida(f"{resposta}")
+    
+    except:
+        raise
+        eel.saida(f"Bot: não entendi... ")
     
 
 eel.init('frontend')
 eel.start('index.html')
+chat("ola")
