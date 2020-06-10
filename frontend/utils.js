@@ -5,10 +5,7 @@ function speak(message){
     window.speechSynthesis.speak(msg)
 }
 
-function listen(){
-    const startButton = document.querySelector('#start')
-    const output = document.querySelector('#output')
-
+function listen(startButton, output, callback){
     function start(callback){
         const recognition = new webkitSpeechRecognition()
         recognition.interimResults = true
@@ -26,7 +23,7 @@ function listen(){
     }
 
     startButton.addEventListener('click', () => start(content => {
-        output.textContent = content;
+        callback(content)
     }))
 }
 
