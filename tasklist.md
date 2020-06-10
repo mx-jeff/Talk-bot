@@ -3,6 +3,8 @@
 [x] Clear logs
 [x] install chatterbot
 [x] input/output with UI
-[ ] Separate trainers
-[ ] Add speech syntetisis
+[x] Separate trainers
+[x] Add speech syntetisis
+[ ] Refactot input voice
+[ ] Button to start/stop listening
 [ ] Webscrapping/automating with whatsapp?
